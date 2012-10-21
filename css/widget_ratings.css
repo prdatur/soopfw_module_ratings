@@ -1,0 +1,23 @@
+.star_rating {
+	width: 0;
+	position: relative;
+	cursor: pointer;
+	background-repeat: repeat-x;
+	background-image: url('../templates/images/star_empty.png');
+}
+
+.star_rating > div.star_rating_event_layer {
+	z-index: 2;
+	width: 100%;
+}
+.star_rating > div.star_rating_rating {
+	z-index: 1;
+	display: inline-block;
+	background-image: url('../templates/images/star_full.png');
+}
+
+.star_rating_layer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}

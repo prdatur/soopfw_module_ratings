@@ -1,0 +1,8 @@
+;Information
+version = 1
+name = "Ratings"
+description = "Act as a widget for other modules/content pages where user should rate"
+
+;Define rights rights[] = "example.right.view"
+rights["admin.ratings.manage"] = "Allow to manage the ratings"
+rights["admin.ratings.delete"] = "Allow to delete ratings"
