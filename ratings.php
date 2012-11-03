@@ -5,7 +5,7 @@
  * @copyright Christian Ackermann (c) 2010 - End of life
  * @author Christian Ackermann <prdatur@gmail.com>
  */
-class ratings extends ActionModul implements Widget {
+class Ratings extends ActionModul implements Widget {
 
 	/**
 	 * Define provided widgets.
@@ -226,41 +226,41 @@ class ratings extends ActionModul implements Widget {
 
 				// Default allow only registered users.
 				if ($widget_config->is_set(RatingsWidgetConfiguration::ALLOW_ONLY_REGISTERED_USER) === false) {
-					if ($this->core->get_dbconfig('ratings', ratings::CONFIG_DEFAULT_ALLOW_ONLY_REGISTERED_USER, 'yes') === 'yes') {
+					if ($this->core->get_dbconfig('ratings', Ratings::CONFIG_DEFAULT_ALLOW_ONLY_REGISTERED_USER, 'yes') === 'yes') {
 						$widget_config->enable(RatingsWidgetConfiguration::ALLOW_ONLY_REGISTERED_USER);
 					}
 				}
 
 				// Default max stars.
 				if ($widget_config->is_set(RatingsWidgetConfiguration::MAX_STARS) === false) {
-					$widget_config->set(RatingsWidgetConfiguration::MAX_STARS, (int)$this->core->get_dbconfig('ratings', ratings::CONFIG_DEFAULT_MAX_STARS, 5));
+					$widget_config->set(RatingsWidgetConfiguration::MAX_STARS, (int)$this->core->get_dbconfig('ratings', Ratings::CONFIG_DEFAULT_MAX_STARS, 5));
 				}
 
 				// Default star size.
 				if ($widget_config->is_set(RatingsWidgetConfiguration::STAR_SIZE) === false) {
-					$widget_config->set(RatingsWidgetConfiguration::STAR_SIZE, (int)$this->core->get_dbconfig('ratings', ratings::CONFIG_DEFAULT_STAR_SIZE, 24));
+					$widget_config->set(RatingsWidgetConfiguration::STAR_SIZE, (int)$this->core->get_dbconfig('ratings', Ratings::CONFIG_DEFAULT_STAR_SIZE, 24));
 				}
 
 				// Default tooltip enabled.
 				if ($widget_config->is_set(RatingsWidgetConfiguration::TOOLTIP_ENABLED) === false) {
-					if ($this->core->get_dbconfig('ratings', ratings::CONFIG_DEFAULT_TOOLTIP_ENABLED, 'yes') === 'yes') {
+					if ($this->core->get_dbconfig('ratings', Ratings::CONFIG_DEFAULT_TOOLTIP_ENABLED, 'yes') === 'yes') {
 						$widget_config->enable(RatingsWidgetConfiguration::TOOLTIP_ENABLED);
 					}
 				}
 
 				// Default tooltip template.
 				if ($widget_config->is_set(RatingsWidgetConfiguration::TOOLTIP_TEMPLATE) === false) {
-					$widget_config->set(RatingsWidgetConfiguration::TOOLTIP_TEMPLATE, $this->core->get_dbconfig('ratings', ratings::CONFIG_DEFAULT_TOOLTIP_TEMPLATE, RatingsWidgetConfiguration::DEFAULT_TOOLTIP_TEMPLATE_YOUTUBE));
+					$widget_config->set(RatingsWidgetConfiguration::TOOLTIP_TEMPLATE, $this->core->get_dbconfig('ratings', Ratings::CONFIG_DEFAULT_TOOLTIP_TEMPLATE, RatingsWidgetConfiguration::DEFAULT_TOOLTIP_TEMPLATE_YOUTUBE));
 				}
 
 				// Default tooltip position.
 				if ($widget_config->is_set(RatingsWidgetConfiguration::TOOLTIP_POSITION) === false) {
-					$widget_config->set(RatingsWidgetConfiguration::TOOLTIP_POSITION, $this->core->get_dbconfig('ratings', ratings::CONFIG_DEFAULT_TOOLTIP_POSITION, RatingsWidgetConfiguration::DEFAULT_TOOLTIP_POSITION_TOP_CENTER));
+					$widget_config->set(RatingsWidgetConfiguration::TOOLTIP_POSITION, $this->core->get_dbconfig('ratings', Ratings::CONFIG_DEFAULT_TOOLTIP_POSITION, RatingsWidgetConfiguration::DEFAULT_TOOLTIP_POSITION_TOP_CENTER));
 				}
 
 				// Default tooltip tip position.
 				if ($widget_config->is_set(RatingsWidgetConfiguration::TOOLTIP_TIP_POSITION) === false) {
-					$widget_config->set(RatingsWidgetConfiguration::TOOLTIP_TIP_POSITION, $this->core->get_dbconfig('ratings', ratings::CONFIG_DEFAULT_TOOLTIP_TIP_POSITION, RatingsWidgetConfiguration::DEFAULT_TOOLTIP_TIP_POSITION_BOTTOM_CENTER));
+					$widget_config->set(RatingsWidgetConfiguration::TOOLTIP_TIP_POSITION, $this->core->get_dbconfig('ratings', Ratings::CONFIG_DEFAULT_TOOLTIP_TIP_POSITION, RatingsWidgetConfiguration::DEFAULT_TOOLTIP_TIP_POSITION_BOTTOM_CENTER));
 				}
 
 				// Register the widget and the template file.
