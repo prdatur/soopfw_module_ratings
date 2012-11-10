@@ -31,14 +31,18 @@ class Ratings extends ActionModul implements Widget {
 	protected $default_methode = self::NO_DEFAULT_METHOD;
 
 	/**
-	 * Implementation get_admin_menu().
+	 * Implements hook: admin_menu
+	 *
+	 * Returns an array which includes all links and childs for the admin menu.
+	 * There are some special categories in which the module can be injected.
+	 * The following categories are current supported:
+	 *   style, security, content, structure, authentication, system, other
 	 *
 	 * @return array the menu
 	 */
-	public function get_admin_menu() {
+	public function hook_admin_menu() {
 		return array(
-			// Order id, same order ids will be unsorted placed behind each.
-			10 => array(
+			AdminMenu::CATEGORY_STRUCTURE => array(
 				'#id' => 'soopfw_ratings', //A unique id which will be needed to generate the submenu
 				'#title' => t("Rating"), //The main title
 				'#link' => "#", // The main link
