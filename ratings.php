@@ -182,7 +182,7 @@ class Ratings extends ActionModul implements Widget {
 
 				// Check if the user exist.
 				if ($user_obj->load_success()) {
-					$row['user'] = '<a href="/user/user/' . $id . '">' . $user_obj->username . '</a>';
+					$row['user'] = '<a href="/user/edit/' . $id . '">' . $user_obj->username . '</a>';
 				}
 				else {
 					$row['user'] = t('(Not existing user: @id)', array('@id' => $id));
