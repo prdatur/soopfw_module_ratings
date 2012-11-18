@@ -46,7 +46,7 @@ class RatingsObj extends AbstractDataManagement
 	 * Returns the current rating.
 	 *
 	 * @param boolean $rounded
-	 *   Wether to get the raw or the rounded number.
+	 *   Whether to get the raw or the rounded number.
 	 *   If we want to round, we get a decimal without floating point values. (optional, default = false)
 	 *
 	 * @return float The current rating.
