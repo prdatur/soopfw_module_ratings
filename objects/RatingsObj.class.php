@@ -5,6 +5,7 @@
  *
  * @copyright Christian Ackermann (c) 2010 - End of life
  * @author Christian Ackermann <prdatur@gmail.com>
+ * @category Objects
  */
 class RatingsObj extends AbstractDataManagement
 {
@@ -28,7 +29,7 @@ class RatingsObj extends AbstractDataManagement
 
 		$this->db_struct->set_cache(true);
 		$this->db_struct->add_reference_key(array("widget_id"));
-		
+
 		$this->db_struct->add_field("widget_id", t("widget id"), PDT_STRING, '', '32');
 		$this->db_struct->add_field("rating_count", t("The ratings count"), PDT_INT, 0, 'UNSIGNED');
 		$this->db_struct->add_field("rating_sum", t("The ratings sum"), PDT_INT, 0, 'UNSIGNED');
